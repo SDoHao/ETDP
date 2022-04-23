@@ -1,7 +1,7 @@
 /*
 *Electrochemical Test Data Processing
-*Created by SDoHao on 2022/3/16
-*This file is from https://github.com/SDoHao/ETDP.git
+*Created by SDoHao on 2022/4/22
+*This file is from https://github.com/SDoHao/ETDP
 */
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
@@ -14,21 +14,21 @@ char szrule[] = { "Rule.ini" };
 
 int main()
 {
-	config RuleList[1], *Rule;
+	config RuleList[1], *pRule;
 	double area;
 	double radius;
 	int pH;
 
 	ReadConfig(szrule, RuleList);
-	Rule = &RuleList[0];
+	pRule = &RuleList[0];
 
-	radius = atof(GetValue(Rule, "Radius"));
+	radius = atof(GetValue(pRule, "Radius"));
 	area = PI * radius * radius / 100;
 	printf("\nArea is %f cm^2.\n", area);
 
-	pH = atoi(GetValue(Rule, "pH"));
+	pH = atoi(GetValue(pRule, "pH"));
 
-	OpenDir(GetValue(Rule, "Path"));
+	OpenDir(GetValue(pRule, "Path"));
 	LoadScv();
 	ProcessScv(1,area, pH);
 	SaveScv();
