@@ -1,11 +1,7 @@
 # ETDP
 Electrochemical Test Data Processing
 
-<<<<<<< HEAD
 处理Path路径下的保存格式为scv的所有电化学数据文件
-=======
-ORR数据处理  
->>>>>>> fc08b6f194f6754103215960d0a57acf55176ab7
 
 修改规则文件Rule.ini
 Path=. 默认当前文件夹，也可以是E:\\Code\\1\\,注意是双斜杠
