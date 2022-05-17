@@ -4,6 +4,6 @@ DIR *pdir;
 struct dirent *pdirstu;
 
 void OpenDir(char filedir[]);
-void LoadScv();
-void ProcessScv(int mode,double area,int pH);
-void SaveScv();
+void LoadScv(int modeid);
+void ProcessScv(int modeid,double area,int pH,int refe);
+void SaveScv(int modeid, int st, int ed);

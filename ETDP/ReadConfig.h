@@ -1,5 +1,5 @@
 #pragma once
-#define KeyLenth 11
+#define KeyLenth 15
 #define ValueLenth 50
 #define ConfigNameLenth 101
 
